@@ -1,7 +1,7 @@
-import com.org.Test;
+import com.org.PluginManager;
 
 def call() {
-    getName("hello");
+    new PluginManager().getName("hello");
     node {
       sh '''
         git version
