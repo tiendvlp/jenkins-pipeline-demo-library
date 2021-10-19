@@ -1,4 +1,4 @@
-import com.org.PluginManager;
+evaluate(new File("../src.PluginManager.groovy"))
 
 def call() {
     new PluginManager().getName("hello");
