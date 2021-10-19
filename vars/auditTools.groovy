@@ -1,10 +1,10 @@
 evaluate(new File(""))
 
 def call() {
-    def tools = new GroovyScriptEngine( '.' ).with {
-      loadScriptByName( '../src/PluginManager.groovy' )
-    }
-    new PluginManager().getName("Hello");
+File sourceFile = new File("../src/PluginManager.groovy");
+Class groovyClass = new GroovyClassLoader(getClass().getClassLoader()).parseClass(sourceFile);
+PluginManager myCoolObject = (PluginManager) groovyClass.newInstance();
+println(myCoolObject.getName("Hello"));
     node {
       sh '''
         git version
