@@ -1,6 +1,8 @@
 
 def call() {
-    return new PluginManager();
+    node {
+        return new PluginManager();
+    }
 }
 
 private class PluginManager implements Serializable {
