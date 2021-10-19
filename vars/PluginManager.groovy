@@ -1,9 +1,9 @@
 
 PluginManager call() {
-    return new PluginManager();
+    return new PluginManagerClazz();
 }
 
-private class PluginManager implements Serializable {
+private class PluginManagerClazz implements Serializable {
     public String getName (String name) {
         return name;
     }
