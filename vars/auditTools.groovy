@@ -1,7 +1,10 @@
-evaluate(new File("../src/PluginManager.groovy"))
+evaluate(new File(""))
 
 def call() {
-    new PluginManager().getName("hello");
+    def tools = new GroovyScriptEngine( '.' ).with {
+      loadScriptByName( '../src/PluginManager.groovy' )
+    }
+    new tools().getName("Hello");
     node {
       sh '''
         git version
