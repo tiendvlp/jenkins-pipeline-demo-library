@@ -7,7 +7,7 @@ apply plugin: 'java'
 sourceSets {
   main {
     groovy {
-      srcDirs = ['vars']
+      srcDirs = ['vars', 'src']
     }
   }
 
