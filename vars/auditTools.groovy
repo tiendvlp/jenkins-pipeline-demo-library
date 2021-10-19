@@ -1,4 +1,4 @@
-evaluate(new File("../src.PluginManager.groovy"))
+evaluate(new File("../src/PluginManager.groovy"))
 
 def call() {
     new PluginManager().getName("hello");
