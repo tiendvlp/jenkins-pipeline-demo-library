@@ -1,4 +1,4 @@
-import com.org;
+import com.org.Test;
 
 def call() {
     getName("hello");
